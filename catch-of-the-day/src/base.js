@@ -1,11 +1,8 @@
 import Rebase from 're-base'
 import firebase from 'firebase'
+import firebaseConfig from './secrets'
 
-const firebaseApp = firebase.initializeApp({
-  apiKey: 'AIzaSyCu-1rgo38FlEZN1h8hMgk_W1RYTUWW3Ww',
-  authDomain: 'catch-of-the-day-neil-s.firebaseapp.com',
-  databaseURL: 'https://catch-of-the-day-neil-s.firebaseio.com',
-})
+const firebaseApp = firebase.initializeApp(firebaseConfig)
 
 const base = Rebase.createClass(firebaseApp.database())
 
